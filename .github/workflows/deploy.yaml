@@ -25,4 +25,7 @@ jobs:
         run: npm install
 
       - name: Run test script
+        env:
+          VARIABLE: ${{ vars.VARIABLE }}
+          SECRET: ${{ secrets.SECRET }}
         run: npm start
